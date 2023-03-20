@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load app_tags %}
+
+{% block title %} Get Admission - {{blog.title}} {% endblock title %}
+
+{% block content %}
+        <!-- Inner Banner -->
+        <div class="inner-banner inner-bg4">
+            <div class="container">
+                <div class="inner-banner-title text-center">
+                    <h3>{{blog.title}}</h3>
+                    <p>{{blog.intro}}</p>
+                </div>
+                
+                <div class="banner-list">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-7">
+                            <ul class="list">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>
+                                <li>Blog</li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                </li>
+                                <li class="active">{{blog.title}}</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6 col-md-5">
+                            <ul class="social-link">
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                                </li> 
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Inner Banner End -->
+
+        <!-- Blog Details Area -->
+        <div class="blog-details-area pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog-article">
+                            <div class="article-comment-area">
+                                <div class="article-img">
+                                    <img src="assets/img/blog/blog-details.jpg" alt="Images">
+                                </div>
+    
+                                <ul class="article-comment">
+                                    <li>
+                                        {% comment %} TODO: Add author thumbnail {% endcomment %}
+
+                                        {% comment %} <div class="image">
+                                            <img src="assets/img/blog/blog-author.png" alt="Images">
+                                        </div> {% endcomment %}
+
+                                        <div class="content">
+                                            <h3>{{blog.author.name}}</h3>
+                                            <span>{{blog.date_created}}</span>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <div class="content-list">
+                                            <h3>Categories</h3>
+                                            <span>{% for cat in blog.category|list_display %}
+                                                {{cat}} 
+                                                {% endfor %}</span>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                            <div class="article-content">
+                                <h3>{{blog.title}}</h3>
+                                    
+                                {{blog.body|safe}}
+
+                                <div class="blog-tag">
+                                    <ul>
+                                        <li class="active">Tags:</li>
+                                        {% for tag in blog.tags|list_display%}
+                                            <li><a href="#">#{{tag}}</a></li>
+                                        {% endfor %}
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="article-post">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="article-post-share">
+                                            <span>Jun 12, 2020 / <a href="#">Home</a></span>
+                                            <a href="#">
+                                                <h3>Luxury Property Is Might Be First Choose?</h3>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="article-post-share text-align active">
+                                            <span>April 19, 2020 / <a href="#">Interior</a></span>
+                                            <a href="#">
+                                                <h3 class="active">
+                                                    Real Estate Is Being Came
+                                                    In The Place Of Expectation
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="comments-form">
+                                <div class="contact-form">
+                                    <span>Reply</span>
+                                    <h2>Leave a Reply</h2>
+                                    <form method="POST" action=".">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm-6">
+                                                <div class="form-group">
+                                                    <i class='bx bx-user'></i>
+                                                    <input type="text" name="{{form.name.html_name}}" class="form-control" required data-error="Please enter name*" placeholder="Name*">
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-lg-6 col-sm-6">
+                                                <div class="form-group">
+                                                    <i class='bx bx-mail-send'></i>
+                                                    <input type="email" name="{{form.email.html_name}}"  class="form-control" required data-error="Please enter your email" placeholder="Your Address*">
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <i class='bx bx-envelope'></i>
+                                                    <textarea name="{{form.message.html_name}}" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-lg-12 col-md-12">
+                                                <button type="submit" class="default-btn border-radius">
+                                                    Post A Comment
+                                                    <i class='bx bx-plus'></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="blog-widget-left">
+                            
+
+                            <div class="blog-widget-profile">
+                                <div class="images">
+                                    <img src="{{blog.author.image.url}}" alt="Images">
+                                </div>
+                                <div class="content">
+                                    <h3>{{blog.author.name}}</h3>
+                                    <span>Author Of This Blog</span>
+                                </div>
+                                
+                                <p>I’m Jhon hack from an initial feaity study, continuing through limlna businessack from</p>
+                                <ul class="social-link">
+                                    <li>
+                                        <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
+                                    </li> 
+                                </ul>
+                            </div>
+
+                            <div class="blog-widget">
+                                <h3 class="title">Popular Posts</h3>
+                                <div class="widget-popular-post">
+                                    <article class="item">
+                                        <a href="blog-details.html" class="thumb">
+                                            <span class="full-image cover bg1" role="img"></span>
+                                        </a>
+                                        <div class="info">
+                                            <time datetime="2020-01-12">Jnauary 12, 2020</time>
+                                            <h4 class="title-text">
+                                                <a href="blog-details.html">
+                                                    Real Estate Is Being
+                                                </a>
+                                            </h4>
+                                            <p>Jhon hack from an iitial feaity study</p>
+                                        </div>
+                                    </article>
+    
+                                    <article class="item">
+                                        <a href="blog-details.html" class="thumb">
+                                            <span class="full-image cover bg2" role="img"></span>
+                                        </a>
+                                        <div class="info">
+                                            <time datetime="2020-06-30">June 30, 2020</time>
+                                            <h4 class="title-text">
+                                                <a href="blog-details.html">
+                                                    Place Of Expectation
+                                                </a>
+                                            </h4>
+                                            <p>Jhon hack from an iitial feaity study</p>
+                                        </div>
+                                    </article>
+    
+                                    <article class="item">
+                                        <a href="blog-details.html" class="thumb">
+                                            <span class="full-image cover bg3" role="img"></span>
+                                        </a>
+                                        <div class="info">
+                                            <span>April 09, 2020</span>
+                                            <h4 class="title-text">
+                                                <a href="blog-details.html">
+                                                    Came In The Place 
+                                                </a> 
+                                            </h4>
+                                            <p>Jhon hack from an iitial feaity study</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="blog-widget">
+                                <h3 class="title">News Tags</h3>
+                                <ul class="blog-widget-tag">
+                                    <li><a href="#">#Home</a></li>
+                                    <li><a href="#"><b>#Residence</b></a></li>
+                                    <li><a href="#">#Realestate</a></li>
+                                    <li><a href="#"><b>#Residence</b></a></li>
+                                    <li><a href="#">#Fancyhouse</a></li>
+                                    <li><a href="#">#Realestate</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="blog-widget">
+                                <h3 class="title">Categories</h3>
+                                <div class="widget_categories">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Outdoor <span>(1)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Interviews <span>(4)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Camping <span>(3)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lifestyle <span>(2)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Outdoor <span>(6)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Travel <span>(18)</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="blog-widget">
+                                <h3 class="title">Twitter</h3>
+                                <div class="widget-post-into">
+                                    <div class="blog-widget-post">
+                                        <span>@Downtown - 1 day ago</span>
+                                        <a href="#">
+                                            <h3>Renovations that Add the Most Resale Value to your Home</h3> 
+                                        </a>
+                                    </div>
+    
+                                    <div class="blog-widget-post">
+                                        <span>@Downtown - 31 December</span>
+                                        <a href="#">
+                                            <h3>Most Resale Renovations that Add the Value to your Home</h3> 
+                                        </a>
+                                    </div>
+    
+                                    <div class="blog-widget-post">
+                                        <span>@Downtown - 14 July</span>
+                                        <a href="#">
+                                            <h3> Add the Most Resale that Value to your Home</h3> 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog Details Area End -->
+{% endblock content %}
