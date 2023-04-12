@@ -2,6 +2,10 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 
+type_choices =(
+    ('University', 'university'),
+    ('College', 'college')
+)
 
 class Gallery(models.Model):
     title = models.CharField(max_length=120)
@@ -19,6 +23,7 @@ class Author(models.Model):
 
 class College(models.Model):
     title = models.CharField(max_length=120)
+    institute_type = models.CharField(max_length=120, choices=type_choices, default='college')
     slug = models.SlugField()
     image = models.ImageField(upload_to='header')
     location = models.CharField(max_length=150)
