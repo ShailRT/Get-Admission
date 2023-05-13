@@ -11,4 +11,11 @@ def list_display(value):
 def is_valid_param(param):
     return param != "" and param != None
 
+@register.filter
+def times(number):
+    return range(number)
+@register.filter
+def remain_times(number):
+    number = 5-number 
+    return range(number)
 # register.filter('list_display', list_display)

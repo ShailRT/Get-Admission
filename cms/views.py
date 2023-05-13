@@ -7,9 +7,10 @@ def is_valid_param(param):
 
 def college_detail(request, pk):
     college = College.objects.filter(slug=pk).first()
-
+    popular_colleges = College.objects.all()[:2]
     context = {
         'college': college,
+        'popular_colleges': popular_colleges
     }
 
     return render(request, 'college-detail.html', context)

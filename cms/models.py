@@ -32,7 +32,10 @@ class College(models.Model):
     description = RichTextField()
     gallery = models.ManyToManyField(Gallery)
     rating = models.DecimalField(max_digits=2, decimal_places=1)
+    star_count = models.PositiveIntegerField(null=True,blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
+    fee_range = models.CharField(max_length=120, blank=True, null=True)
+    website = models.CharField(max_length=120, blank=True, null=True)
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
 
     class Meta:

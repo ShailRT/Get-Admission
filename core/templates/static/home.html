@@ -12,17 +12,17 @@
             <div class="container">
                 <div class="banner-content banner-content-ptb text-center">
                     <p>Get Admission</p>
-                    <h1 class="margin-auto">Get Your <b> Own Course </b></h1>
+                    <h1 class="margin-auto">Get Your <b> Admssion </b></h1>
                     <div class="banner-form">
-                        <form>
+                        <form method="GET" action="/college">
                             <div class="row">
                                 <div class="col-lg-2 col-md-4">
                                     <div class="form-group">
                                         <i class='flaticon-place'></i>
-                                        <select class="form-control" name="country">
+                                        <select class="form-control" name="state_include">
                                             <option>State</option>
                                             <option>Delhi NCR</option>
-                                            <option>Maharashtra</option>
+                                            <option>Maharastra</option>
                                             <option>Uttarpradesh</option>
                                         </select>
                                     </div>
@@ -31,18 +31,17 @@
                                 <div class="col-lg-4 col-md-4">
                                     <div class="form-group">
                                         <i class='flaticon-vision'></i>
-                                        <input class="form-control" type="text"  placeholder="What are looking for?">
+                                        <input class="form-control" type="text"  placeholder="What are looking for?" name="search_include">
                                     </div>
                                 </div>
     
                                 <div class="col-lg-4 col-md-4">
                                     <div class="form-group">
                                         <i class='flaticon-category'></i>
-                                        <select class="form-control">
-                                            <option>All Courses</option>
-                                            <option>B.Tech</option>
-                                            <option>B.Sc</option>
-                                            <option>BCA</option>
+                                        <select class="form-control" name="type_include">
+                                            <option value="">Institute</option>
+                                            <option>College</option>
+                                            <option>University</option>
                                         </select>	
                                     </div>
                                 </div>
@@ -497,11 +496,11 @@
 
                 <div class="content">
                     <a href="listing-details.html">
-                        <h3>Amity University</h3>
+                        <h3>IIM Banglore</h3>
                     </a> 
                     <p>
                         <i class="flaticon-cursor"></i>
-                        Noida, Uttarpradesh 
+                        Bangalore, Karnataka
                     </p>
 
                     <ul class="place-rating">
@@ -741,9 +740,9 @@
                         </div>
                         <span>
                             <i class="flaticon-cursor"></i>
-                            Noida, Uttarpradesh
+                            Noida, Uttarpradesh<br>
                         </span>
-                        <a href="listing-details.html"><h3>Amity Institute</h3></a>
+                        <a href="/college/gniot"><h3>Amity University</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
                         <div class="content-tag">
                             <ul>
@@ -798,7 +797,7 @@
                         </div>
                         <span>
                             <i class="flaticon-cursor"></i>
-                            Greater Noida, Uttarpradesh
+                            Greater Noida, Uttarpradesh<br>
                         </span>
                         <a href="listing-details.html"><h3>Noida Institute Of Technology</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
@@ -855,7 +854,7 @@
                         </div>
                         <span>
                             <i class="flaticon-cursor"></i>
-                            Greater Noida, Uttarpradesh
+                            Greater Noida, Uttarpradesh<br>
                         </span>
                         <a href="listing-details.html"><h3>Lloyd College</h3></a> 
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
@@ -912,7 +911,7 @@
                         </div>
                         <span>
                             <i class="flaticon-cursor"></i>
-                            Greater Noida, Uttarpradesh
+                            Greater Noida, Uttarpradesh<br>
                         </span>
                         <a href="listing-details.html"><h3>GL Bajaj</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>

@@ -49,7 +49,9 @@
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <i class='flaticon-loupe'></i>
-                                            <input type="text" name="search_include" class="form-control" placeholder="{% if search_include|is_valid_param %}{{search_include}}{% else %}What Are Searching*{% endif %}">
+                                            <input type="text" name="search_include" class="form-control" 
+                                            value="{% if search_include|is_valid_param %}{{search_include}}{% endif %}" 
+                                            placeholder="{% if search_include|is_valid_param %}{% else %}What Are Searching*{% endif %}">
                                         </div>
                                     </div>
 
@@ -145,34 +147,12 @@
                                     </a>
 
                                     <div class="place-profile">
-                                        <img src="assets/img/place-list/place-profile.png" alt="Images">
                                         <h3>By, {{college.author.name}}</h3>
                                     </div>
                                     <div class="place-status bg-dark-orange">
                                         <a href="listing-details.html">
                                             <h3>Open Now</h3>
                                         </a>
-                                    </div>
-                                    <div class="place-tag">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="flaticon-place"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="flaticon-like"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="flaticon-workflow"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <span><a href="#">$$$</a></span>
-                                        <h3 class="title"><a href="{% url 'college-detail' pk=college.slug %}">{{college.institute_type|capfirst}}</a></h3>
                                     </div>
                                 </div>
 
@@ -190,11 +170,12 @@
                                             <a href="#">{{college.rating}}</a>
                                         </li>
                                         <li>
+                                            {% for _ in college.star_count|times %}
                                             <i class='bx bxs-star'></i>
-                                            <i class='bx bxs-star'></i>
-                                            <i class='bx bxs-star'></i>
+                                            {% endfor %}
+                                            {% for _ in college.star_count|remain_times %}
                                             <i class='bx bxs-star icon-color'></i>
-                                            <i class='bx bxs-star icon-color'></i>
+                                            {% endfor %}
                                         </li>
                                     </ul>
                                 </div>
