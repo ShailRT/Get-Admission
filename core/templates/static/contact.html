@@ -36,7 +36,7 @@
                             <div class="contact-card">
                                 <i class="flaticon-position"></i>
                                 <h3>Sector 18</h3>
-                                <h3>Noida, Uttarpradesh, Indiat</h3>
+                                <h3>Noida, Uttarpradesh, India</h3>
                             </div>
                         </div>
     
@@ -64,25 +64,18 @@
         <!-- Map Area Two -->
         <div class="contact-map">
             <div class="container-fluid m-0 p-0">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2033420.4456907373!2d-76.77319039695011!3d5.48885346715773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442e4d1580d825%3A0xeeedce6524559034!2sRinc%C3%B3n%20del%20Bosque!5e0!3m2!1sen!2sbd!4v1611489832448!5m2!1sen!2sbd" ></iframe>
+                <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=get%20admission%20noida+(Get%20Admission)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>
                 <div class="contact-wrap">
                     <div class="contact-form">
                         <span>SEND MESSAGE</span>
                         <h2>Contact With Us</h2>
-                        <form id="contactForm">
+                        <form method="POST" action=".">
+                            {% csrf_token %}
                             <div class="row">
                                 <div class="col-lg-6 col-sm-6">
                                     <div class="form-group">
                                         <i class='bx bx-user'></i>
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <i class='bx bx-user'></i>
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="E-mail*">
+                                        <input type="text" name="{{form.name.html_name}}" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -90,15 +83,15 @@
                                 <div class="col-lg-6 col-sm-6">
                                     <div class="form-group">
                                         <i class='bx bx-phone'></i>
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
+                                        <input type="text" name="{{form.phone.html_name}}" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-sm-6">
+                                <div class="col-lg-12 col-sm-6">
                                     <div class="form-group">
-                                        <i class='bx bx-file'></i>
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
+                                        <i class='bx bx-user'></i>
+                                        <input type="email" name="{{form.email.html_name}}" id="email" class="form-control" required data-error="Please enter your email" placeholder="E-mail*">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -106,7 +99,7 @@
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <i class='bx bx-envelope'></i>
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
+                                        <textarea name="{{form.message.html_name}}" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -116,8 +109,6 @@
                                         Send Message
                                         <i class='bx bx-plus'></i>
                                     </button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </form>

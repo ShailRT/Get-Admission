@@ -1,16 +1,23 @@
 from django.shortcuts import render
 from .models import College
 
+from core.forms import CommentForm
+
 def is_valid_param(param):
     return param != "" and param != None
 
 
 def college_detail(request, pk):
+    form = CommentForm(request.POST or None)
+    if form.is_valid():
+        form.save() 
     college = College.objects.filter(slug=pk).first()
     popular_colleges = College.objects.all()[:2]
+
     context = {
         'college': college,
-        'popular_colleges': popular_colleges
+        'popular_colleges': popular_colleges,
+        'form': form,
     }
 
     return render(request, 'college-detail.html', context)

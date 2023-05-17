@@ -191,33 +191,33 @@
                                     </div>
                                 </div>
                                 <div class="contact-form">
-                                    <form id="contactForm">
+                                    <form method="POST" action=".">
+                                        {% csrf_token %}
                                         <div class="row">
                                             <div class="col-lg-6 col-sm-6">
                                                 <div class="form-group">
                                                     <i class='bx bx-user'></i>
-                                                    <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
+                                                    <input type="text" name="{{form.name.html_name}}" class="form-control" required data-error="Please enter name*" placeholder="Name*">
                                                 </div>
                                             </div>
-            
+                
                                             <div class="col-lg-6 col-sm-6">
                                                 <div class="form-group">
-                                                    <i class='bx bx-user'></i>
-                                                    <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="E-mail*">
+                                                    <i class='bx bx-mail-send'></i>
+                                                    <input type="email" name="{{form.email.html_name}}"  class="form-control" required data-error="Please enter your email" placeholder="Your Address*">
                                                 </div>
                                             </div>
-            
+                
                                             <div class="col-lg-12 col-md-12">
                                                 <div class="form-group">
                                                     <i class='bx bx-envelope'></i>
-                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                                    <div class="help-block with-errors"></div>
+                                                    <textarea name="{{form.message.html_name}}" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
                                                 </div>
                                             </div>
-            
+                
                                             <div class="col-lg-12 col-md-12">
                                                 <button type="submit" class="default-btn border-radius">
-                                                    Submit Comment 
+                                                    Post A Comment
                                                     <i class='bx bx-plus'></i>
                                                 </button>
                                             </div>
@@ -233,37 +233,37 @@
                             <div class="listing-widget-side">
                                 <h3 class="title">Send Your Query</h3>
                                 <div class="listing-Booking-form">
-                                    <form>
+                                    <form method="POST" action=".">
+                                        {% csrf_token %}
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <i class='bx bx-user'></i>
-                                                    <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
+                                                    <input type="text" name="{{form.name.html_name}}" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
                                                 </div>
                                             </div>
             
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <i class='flaticon-email-2'></i>
-                                                    <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="E-mail*">
+                                                    <input type="email" name="{{form.email.html_name}}" id="email" class="form-control" required data-error="Please enter your email" placeholder="E-mail*">
                                                 </div>
                                             </div>
             
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <i class='bx bx-phone'></i>
-                                                    <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
+                                                    <input type="text" name="{{form.phone.html_name}}" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
                                                 </div>
                                             </div>
-            
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 text-center">
+                                            <button type="submit" class="default-btn border-radius">
+                                                Send Message
+                                                <i class='bx bx-plus'></i>
+                                            </button>
                                         </div>
                                     </form>
-                                    <div class="col-lg-12 col-md-12 text-center">
-                                        <button type="submit" class="default-btn border-radius">
-                                            Send Message
-                                            <i class='bx bx-plus'></i>
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
 
@@ -284,7 +284,7 @@
                             </div>
 
                             <div class="listing-widget-side">
-                                <h3 class="title">Hosted by :</h3>
+                                <h3 class="title">Writted by :</h3>
                                 <div class="listing-side-host">
                                     <img src="{{college.author.image.url}}" alt="Images">
                                     <h3>{{college.author.name}}</h3>
