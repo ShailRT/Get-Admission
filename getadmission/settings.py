@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = ['https://getadmission.org/','http://*.3.108.182.44']
+
 
 # Application definition
 
