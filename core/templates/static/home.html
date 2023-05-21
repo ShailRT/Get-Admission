@@ -16,6 +16,13 @@
                     <div class="banner-form">
                         <form method="GET" action="/college">
                             <div class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="form-group">
+                                        <i class='flaticon-vision'></i>
+                                        <input class="form-control" type="text"  placeholder="What are looking for?" name="search_include">
+                                    </div>
+                                </div>
+
                                 <div class="col-lg-2 col-md-4">
                                     <div class="form-group">
                                         <i class='flaticon-place'></i>
@@ -25,13 +32,6 @@
                                             <option>Maharastra</option>
                                             <option>Uttarpradesh</option>
                                         </select>
-                                    </div>
-                                </div>
-    
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="form-group">
-                                        <i class='flaticon-vision'></i>
-                                        <input class="form-control" type="text"  placeholder="What are looking for?" name="search_include">
                                     </div>
                                 </div>
     
@@ -133,15 +133,15 @@
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <div class="section-title">
-                    <span>Courses</span>
-                    <h2>Explore Best Courses In India</h2>
+                    <span>Colleges</span>
+                    <h2>Explore Best Colleges In India</h2>
                     <p>Here At Get Admission Our Team Handpicked Best Options According To Your Prefrences </p>
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="city-btn">
-                    <a href="#" class="default-btn">
+                    <a href="/college" class="default-btn">
                         View all courses 
                         <i class='bx bx-plus'></i>
                     </a>
@@ -152,11 +152,11 @@
         <div class="row pt-45">
             <div class="col-lg-4 col-md-6">
                 <div class="city-card">
-                    <a href="#">
+                    <a href="/college?state_include=Delhi+NCR">
                         <img src="{% static 'assets/img/city-area/delhi.jpg'%}" alt="Images">
                     </a>
                     <div class="content">
-                        <a href="/course">
+                        <a href="/college?state_include=Delhi+NCR">
                             <h3>Delhi NCR </h3>
                         </a>
                         <span>17 Colleges</span>
@@ -166,11 +166,11 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="city-card">
-                    <a href="#">
+                    <a href="/college?state_include=Mumbai">
                         <img src="{% static 'assets/img/city-area/mumbai.png'%}" alt="Images">
                     </a>
                     <div class="content">
-                        <a href="#">
+                        <a href="/college?state_include=Mumbai">
                             <h3>Mumbai</h3>
                         </a>
                         <span>13 Colleges</span>
@@ -180,11 +180,11 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="city-card">
-                    <a href="#">
+                    <a href="/college?state_include=Pune">
                         <img src="{% static 'assets/img/city-area/pune.jpg'%}" alt="Images">
                     </a>
                     <div class="content">
-                        <a href="#">
+                        <a href="/college?state_include=Pune">
                             <h3>Pune</h3>
                         </a>
                         <span>13 Colleges</span>
@@ -194,11 +194,11 @@
 
             <div class="col-lg-7 col-md-6">
                 <div class="city-card">
-                    <a href="#">
+                    <a href="/college?state_include=Bangalore">
                         <img src="{% static 'assets/img/city-area/bangalore.png'%}" alt="Images">
                     </a>
                     <div class="content">
-                        <a href="#">
+                        <a href="/college?state_include=Bangalore">
                             <h3>Bangalore</h3>
                         </a>
                         <span>30 Colleges</span>
@@ -208,11 +208,11 @@
 
             <div class="col-lg-5 col-md-6 offset-md-3 offset-lg-0">
                 <div class="city-card">
-                    <a href="#">
+                    <a href="/college?state_include=Madras">
                         <img src="{% static 'assets/img/city-area/kolkata.png'%}" alt="Images">
                     </a>
                     <div class="content">
-                        <a href="#">
+                        <a href="/college?state_include=Madras">
                             <h3>Madras</h3>
                         </a>
                         <span>34 Colleges</span>
@@ -299,29 +299,10 @@
                     <div class="place-status bg-dark-orange">
                         <a href="/college/gniot"><h3>Open Now</h3></a>
                     </div>
-                    <div class="place-tag">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-place"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-like"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-workflow"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
 
                 <div class="content">
-                    <a href="/college/gniot">
+                    <a href="/college/gcet-greater-noida">
                         <h3>Galgotia University </h3>
                     </a> 
                     <p>
@@ -331,7 +312,7 @@
 
                     <ul class="place-rating">
                         <li>
-                            <a href="#">4</a>
+                            <a href="">4</a>
                         </li>
                         <li>
                             <i class='bx bxs-star'></i>
@@ -346,7 +327,7 @@
 
             <div class="place-list-item">
                 <div class="images">
-                    <a href="listing-details.html" class="images-list">
+                    <a href="/college/gcet-greater-noida" class="images-list">
                         <img src="{% static 'assets/img/place-list/iimb.png'%}" alt="Images">
                     </a>
                     
@@ -355,31 +336,12 @@
                         <!-- <h3>By, Jaein</h3> -->
                     </div>
                     <div class="place-status bg-dark-orange">
-                        <a href="listing-details.html"><h3>Open Now</h3></a>
-                    </div>
-                    <div class="place-tag">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-place"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-like"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-workflow"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="/college/gcet-greater-noida"><h3>Open Now</h3></a>
                     </div>
                 </div>
 
                 <div class="content">
-                    <a href="listing-details.html">
+                    <a href="/college/gcet-greater-noida">
                         <h3>IIM Banglore</h3>
                     </a> 
                     <p>
@@ -404,7 +366,7 @@
 
             <div class="place-list-item">
                 <div class="images">
-                    <a href="listing-details.html" class="images-list">
+                    <a href="/college/gcet-greater-noida" class="images-list">
                         <img src="{% static 'assets/img/place-list/cu.png'%}" alt="Images">
                     </a>
                     
@@ -413,31 +375,12 @@
                         <!-- <h3>By, Normand</h3> -->
                     </div>
                     <div class="place-status bg-color-blue">
-                        <a href="listing-details.html"><h3>Open Now</h3></a> 
-                    </div>
-                    <div class="place-tag">
-                        <ul>
-                            <li>
-                                <a href="listing-details.html">
-                                    <i class="flaticon-place"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="listing-details.html">
-                                    <i class="flaticon-like"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-workflow"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="/college/gcet-greater-noida"><h3>Open Now</h3></a> 
                     </div>
                 </div>
 
                 <div class="content">
-                    <a href="listing-details.html">
+                    <a href="/college/chandigarh-university">
                         <h3>Chandigarh University</h3>
                     </a> 
                     <p>
@@ -462,7 +405,7 @@
 
             <div class="place-list-item">
                 <div class="images">
-                    <a href="listing-details.html" class="images-list">
+                    <a href="/college/chandigarh-university" class="images-list">
                         <img src="{% static 'assets/img/place-list/amity.png'%}" alt="Images">
                     </a>
                     
@@ -471,31 +414,12 @@
                         <!-- <h3>By, Olfred</h3> -->
                     </div>
                     <div class="place-status bg-color-blue">
-                        <a href="listing-details.html"><h3>Open Now</h3></a>
-                    </div>
-                    <div class="place-tag">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-place"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-like"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-workflow"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="/college/chandigarh-university"><h3>Open Now</h3></a>
                     </div>
                 </div>
 
                 <div class="content">
-                    <a href="listing-details.html">
+                    <a href="/college/chandigarh-university">
                         <h3>IIM Banglore</h3>
                     </a> 
                     <p>
@@ -505,7 +429,7 @@
 
                     <ul class="place-rating">
                         <li>
-                            <a href="#">4.7</a>
+                            <a href="/college/chandigarh-university">4.7</a>
                         </li>
                         <li>
                             <i class='bx bxs-star'></i>
@@ -520,7 +444,7 @@
 
             <div class="place-list-item">
                 <div class="images">
-                    <a href="listing-details.html" class="images-list">
+                    <a href="/college/sharda-university" class="images-list">
                         <img src="{% static 'assets/img/place-list/sharda.png'%}" alt="Images">
                     </a>
                     
@@ -529,31 +453,12 @@
                         <!-- <h3>By, Alfred</h3> -->
                     </div>
                     <div class="place-status bg-dark-orange">
-                        <a href="listing-details.html"><h3>Open Now</h3></a>
-                    </div>
-                    <div class="place-tag">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-place"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-like"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-workflow"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="/college/sharda-university"><h3>Open Now</h3></a>
                     </div>
                 </div>
 
                 <div class="content">
-                    <a href="listing-details.html">
+                    <a href="/college/sharda-university">
                         <h3>Sharda University</h3>
                     </a> 
                     <p>
@@ -563,7 +468,7 @@
 
                     <ul class="place-rating">
                         <li>
-                            <a href="#">4.9</a>
+                            <a href="/college/sharda-university">4.9</a>
                         </li>
                         <li>
                             <i class='bx bxs-star'></i>
@@ -687,38 +592,19 @@
                         </span>
                         <a href="/college/gniot"><h3>Greater Noida Institute of Technology</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
-                        <div class="content-tag">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-place"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-like"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-workflow"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <div class="place-card">
-                    <a href="listing-details.html" class="place-images">
+                    <a href="/college/amity-university-noida" class="place-images">
                         <img src="{% static 'assets/img/home/college/amity.png'%}" alt="Images">
                     </a>
                     <div class="rating">
                         <ul>
                             <li>
-                                <a href="#">5.0</a>
+                                <a href="/college/amity-university-noida">5.0</a>
                             </li>
                             <li>
                                 <span>30 Review</span>
@@ -731,7 +617,7 @@
                         </ul>
                     </div>
                     <div class="status-tag bg-color-blue">
-                        <a href="listing-details.html"><h3>Open Now</h3></a>
+                        <a href="//college/amity-university-noida"><h3>Open Now</h3></a>
                     </div>
                     <div class="content">
                         <div class="content-profile">
@@ -742,40 +628,21 @@
                             <i class="flaticon-cursor"></i>
                             Noida, Uttarpradesh<br>
                         </span>
-                        <a href="/college/gniot"><h3>Amity University</h3></a>
+                        <a href="/college/amity-university-noida"><h3>Amity University</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
-                        <div class="content-tag">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-place"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-like"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-workflow"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <div class="place-card">
-                    <a href="listing-details.html" class="place-images">
+                    <a href="/college/niet-greater-noida" class="place-images">
                         <img src="{% static 'assets/img/home/college/niet.png'%}" alt="Images">
                     </a>
                     <div class="rating">
                         <ul>
                             <li>
-                                <a href="#">4.9</a>
+                                <a href="/college/niet-greater-noida">4.9</a>
                             </li>
                             <li>
                                 <span>23 Review</span>
@@ -788,7 +655,7 @@
                         </ul>
                     </div>
                     <div class="status-tag bg-color-heliotrope">
-                        <a href="listing-details.html"><h3>Open Now</h3></a>
+                        <a href="/college/niet-greater-noida"><h3>Open Now</h3></a>
                     </div>
                     <div class="content">
                         <div class="content-profile">
@@ -799,40 +666,21 @@
                             <i class="flaticon-cursor"></i>
                             Greater Noida, Uttarpradesh<br>
                         </span>
-                        <a href="listing-details.html"><h3>Noida Institute Of Technology</h3></a>
+                        <a href="/college/niet-greater-noida"><h3>Noida Institute Of Technology</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
-                        <div class="content-tag">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-place"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-like"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-workflow"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <div class="place-card">
-                    <a href="listing-details.html" class="place-images">
+                    <a href="/college/niet-greater-noida" class="place-images">
                         <img src="{% static 'assets/img/home/college/lloyd.png'%}" alt="Images">
                     </a>
                     <div class="rating">
                         <ul>
                             <li>
-                                <a href="#">4.8</a>
+                                <a href="/college/niet-greater-noida">4.8</a>
                             </li>
                             <li>
                                 <span>16 Review</span>
@@ -845,7 +693,7 @@
                         </ul>
                     </div>
                     <div class="status-tag bg-dark-orange">
-                        <a href="listing-details.html"><h3>Closed Now</h3></a> 
+                        <a href="/college/niet-greater-noida"><h3>Closed Now</h3></a> 
                     </div>
                     <div class="content">
                         <div class="content-profile">
@@ -856,40 +704,21 @@
                             <i class="flaticon-cursor"></i>
                             Greater Noida, Uttarpradesh<br>
                         </span>
-                        <a href="listing-details.html"><h3>Lloyd College</h3></a> 
+                        <a href="/college/niet-greater-noida"><h3>Lloyd College</h3></a> 
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
-                        <div class="content-tag">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-place"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-like"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-workflow"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <div class="place-card">
-                    <a href="listing-details.html" class="place-images">
+                    <a href="/college/glbitm-greater-noida" class="place-images">
                         <img src="{% static 'assets/img/home/college/glbajaj.png'%}" alt="Images">
                     </a>
                     <div class="rating">
                         <ul>
                             <li>
-                                <a href="#">5.0</a>
+                                <a href="/college/glbitm-greater-noida">5.0</a>
                             </li>
                             <li>
                                 <span>16 Review</span>
@@ -902,7 +731,7 @@
                         </ul>
                     </div>
                     <div class="status-tag bg-color-blue">
-                        <a href="listing-details.html"><h3>Closed Now</h3></a>
+                        <a href="/college/glbitm-greater-noida"><h3>Closed Now</h3></a>
                     </div>
                     <div class="content">
                         <div class="content-profile">
@@ -913,40 +742,21 @@
                             <i class="flaticon-cursor"></i>
                             Greater Noida, Uttarpradesh<br>
                         </span>
-                        <a href="listing-details.html"><h3>GL Bajaj</h3></a>
+                        <a href="/college/glbitm-greater-noida"><h3>GL Bajaj</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
-                        <div class="content-tag">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-place"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-like"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-workflow"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6">
                 <div class="place-card">
-                    <a href="listing-details.html" class="place-images">
+                    <a href="/college/glbitm-greater-noida" class="place-images">
                         <img src="{% static 'assets/img/home/college/dronacharya.png'%}" alt="Images">
                     </a>
                     <div class="rating">
                         <ul>
                             <li>
-                                <a href="#">5.0</a>
+                                <a href="/college/glbitm-greater-noida">5.0</a>
                             </li>
                             <li>
                                 <span>39 Review</span>
@@ -959,7 +769,7 @@
                         </ul>
                     </div>
                     <div class="status-tag bg-color-green">
-                        <a href="listing-details.html"><h3>Open Now</h3></a>
+                        <a href="/college/glbitm-greater-noida"><h3>Open Now</h3></a>
                     </div>
                     <div class="content">
                         <div class="content-profile">
@@ -970,27 +780,8 @@
                             <i class="flaticon-cursor"></i>
                             Greater Noida, Uttarpradesh
                         </span>
-                        <a href="listing-details.html"><h3>Dronacharya Group of Institutions</h3></a>
+                        <a href="/college/glbitm-greater-noida"><h3>Dronacharya Group of Institutions</h3></a>
                         <p>Lorem ipsum dolor sit amet, consectetur  quam quaerat voluptatem.</p>
-                        <div class="content-tag">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-place"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-like"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="flaticon-workflow"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
