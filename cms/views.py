@@ -43,7 +43,7 @@ def college_list(request):
         college_objs = college_objs.filter(location__icontains=city_include)
     
     paginator = Paginator(college_objs, 6)
-    page_number = request.GET.get('page_number')
+    page_number = request.GET.get('page')
     try:
         page_obj = paginator.get_page(page_number)
     except PageNotAnInteger:
