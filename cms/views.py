@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import College
+from django.core.paginator import Paginator
 
 from core.forms import CommentForm
 
@@ -40,9 +41,18 @@ def college_list(request):
     
     if is_valid_param(city_include):
         college_objs = college_objs.filter(location__icontains=city_include)
+    
+    paginator = Paginator(college_objs, 6)
+    page_number = request.GET.get('page_number')
+    try:
+        page_obj = paginator.get_page(page_number)
+    except PageNotAnInteger:
+        page_obj = paginator.page(1)
+    except EmptyPage:
+        page_obj = paginator.page(paginator.num_pages)
 
     context = {
-        'colleges': college_objs,
+        'colleges': page_obj,
         'search_include': search_include,
         'type_include': type_include,
         'state_include': state_include,

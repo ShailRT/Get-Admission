@@ -138,7 +138,7 @@
                     </div>
 
                     <div class="row">
-                        {% for college in colleges %}
+                        {% for college in colleges.object_list %}
                         <div class="col-lg-6 col-md-6">
                             <div class="place-list-item">
                                 <div class="images">
@@ -183,10 +183,19 @@
                         </div>
                         {% endfor %}
                         <div class="col-lg-12 text-center">
-                            <a href="#" class="default-btn border-radius">
-                                Load More
-                                <i class='bx bx-plus'></i>
-                            </a>
+                            <div class="pagination-area text-center">
+                                {%if colleges.has_previous %} 
+                                <a href="?page={{colleges.previous_page_number}}" class="prev page-numbers">
+                                    <i class="bx bx-chevron-left"></i>
+                                </a>
+                                {% endif %}
+                                <span class="page-numbers current" aria-current="page">{{colleges.number}}</span>
+                                {%if colleges.has_next %}
+                                <a href="?page={{colleges.next_page_number}}" class="next page-numbers">
+                                    <i class="bx bx-chevron-right"></i>
+                                </a> 
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
