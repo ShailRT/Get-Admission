@@ -185,13 +185,13 @@
                         <div class="col-lg-12 text-center">
                             <div class="pagination-area text-center">
                                 {%if colleges.has_previous %} 
-                                <a href="?page={{colleges.previous_page_number}}" class="prev page-numbers">
+                                <a href="?page={{colleges.previous_page_number}}&search_include={{search_include}}&type_include={{type_include}}&state_include={{state_include}}&city_include={{city_include}}" class="prev page-numbers">
                                     <i class="bx bx-chevron-left"></i>
                                 </a>
                                 {% endif %}
                                 <span class="page-numbers current" aria-current="page">{{colleges.number}}</span>
                                 {%if colleges.has_next %}
-                                <a href="?page={{colleges.next_page_number}}" class="next page-numbers">
+                                <a href="?page={{colleges.next_page_number}}&search_include={{search_include}}&type_include={{type_include}}&state_include={{state_include}}&city_include={{city_include}}" class="next page-numbers">
                                     <i class="bx bx-chevron-right"></i>
                                 </a> 
                                 {% endif %}
