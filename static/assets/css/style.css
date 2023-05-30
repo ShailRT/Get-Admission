@@ -8101,3 +8101,7 @@ Animation  CSS
 Animation  CSS End
 =================================*/
 /*# sourceMappingURL=style.css.map */
+
+.listing-widget-post li{
+  margin-bottom: 50px;
+}
