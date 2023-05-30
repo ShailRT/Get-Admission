@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 from core.forms import CommentForm
 
 def is_valid_param(param):
-    return param != "" and param != None
+    return param != "" and param != None and param != "None"
 
 
 def college_detail(request, pk):
