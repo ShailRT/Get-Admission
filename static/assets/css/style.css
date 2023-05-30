@@ -4507,7 +4507,7 @@ Listing Details Area
 
 .listing-widget-post li {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -8102,6 +8102,3 @@ Animation  CSS End
 =================================*/
 /*# sourceMappingURL=style.css.map */
 
-.listing-widget-post li{
-  margin-bottom: 50px;
-}
