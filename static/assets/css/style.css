@@ -4399,15 +4399,18 @@ Listing Details Area
 }
 
 .listing-widget-list {
+  padding: 0;
   list-style: none;
   margin: 0;
-  padding: 0;
+  
 }
+
+
 
 .listing-widget-list li {
   display: block;
-  padding: 10px;
-  margin: 7px 30px;
+  padding: 20px;
+  margin: 0px 30px;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
   font-size: 15px;
@@ -4421,6 +4424,7 @@ Listing Details Area
 
 .listing-widget-list li span a {
   color: var(--paragraphColor);
+
 }
 
 .listing-widget-list li span a:hover {
