@@ -8097,3 +8097,18 @@ Animation  CSS
 Animation  CSS End
 =================================*/
 /*# sourceMappingURL=style.css.map */
+
+.college-table {
+	font-weight: 400;
+	font-size: 15px;
+  width: 90%;
+  color: #8c8c8c !important;
+  margin: 0 35px;
+  
+}
+.college-table thead{
+  color: #2a2a2a;
+}
+.college-table td{
+    padding: 5px 0;
+}

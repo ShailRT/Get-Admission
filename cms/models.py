@@ -30,6 +30,8 @@ class College(models.Model):
     phone = models.CharField(max_length=12)
     email = models.EmailField()
     description = RichTextField()
+    course_fees = RichTextField()
+    placement = RichTextField()
     gallery = models.ManyToManyField(Gallery)
     rating = models.DecimalField(max_digits=2, decimal_places=1)
     star_count = models.PositiveIntegerField(null=True,blank=True)

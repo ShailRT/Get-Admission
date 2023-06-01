@@ -131,19 +131,26 @@
                                 <ul>
                                     <li>
                                         <a href="#description-section">
-                                            <i class="flaticon-touch"></i>
                                             DETAILS
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#gallery-section">
-                                            <i class="flaticon-gallery"></i>
                                             GALLERY
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="#fees-section">
+                                            COURSE & FEES
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#placement-section">
+                                            PLACEMENT
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="#connect-form">
-                                            <i class="flaticon-writing"></i>
                                             REVIEWS
                                         </a>
                                     </li>
@@ -174,8 +181,30 @@
                                 </div>
                             </div>
 
+                            <div class="listing-widget listing-widget-desc" id="fees-section">
+                                <h3 class="title">Course & Fees</h3>
+                                <p> 
+                                    {{college.course_fees|safe}}
+                                </p>
+                                <a href="tel:+91 089293 94101" class="default-btn border-radius" >
+                                    Call Us
+                                    <i class='bx bx-plus'></i>
+                                </a>
+                            </div>
 
-                            <div class="listing-widget-contact" id="connect-form">
+                            <div class="listing-widget listing-widget-desc" id="placement-section">
+                                <h3 class="title">Placement</h3>
+                                <p> 
+                                    {{college.placement|safe}}
+                                </p>
+                                <a href="tel:+91 089293 94101" class="default-btn border-radius" >
+                                    Call Us
+                                    <i class='bx bx-plus'></i>
+                                </a>
+                            </div>
+
+
+                            <div class="listing-widget-contact d-none d-lg-block" id="connect-form">
                                 <div class="listing-contact-title">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
@@ -190,7 +219,7 @@
 
                                     </div>
                                 </div>
-                                <div class="contact-form">
+                                <div class="contact-form d-none d-lg-block">
                                     <form method="POST" action=".">
                                         {% csrf_token %}
                                         <div class="row">
@@ -284,11 +313,11 @@
                             </div>
 
                             <div class="listing-widget-side">
-                                <h3 class="title">Writted by :</h3>
+                                <h3 class="title">Posted by :</h3>
                                 <div class="listing-side-host">
                                     <img src="{{college.author.image.url}}" alt="Images">
                                     <h3>{{college.author.name}}</h3>
-                                    <span>20 PLACES HOSTED</span>
+                                    <span>20 COLLEGE POSTED</span>
                                 </div>
                                 <ul class="side-host-list">
                                     <li>
