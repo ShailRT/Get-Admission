@@ -20,7 +20,7 @@ def blog_detail(request, pk):
 def blog_listing(request):
     blogs = Blog.objects.all()
     paginator = Paginator(blogs, 6)
-    page_number = request.GET.get('page_number')
+    page_number = request.GET.get('page')
     try:
         page_obj = paginator.get_page(page_number)
     except PageNotAnInteger:

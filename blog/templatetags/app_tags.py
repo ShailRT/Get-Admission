@@ -9,7 +9,7 @@ def list_display(value):
 
 @register.filter
 def is_valid_param(param):
-    return param != "" and param != None
+    return param != "" and param != None and param != "None"
 
 @register.filter
 def times(number):

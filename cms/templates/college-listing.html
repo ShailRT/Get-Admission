@@ -27,7 +27,9 @@
                 </div>
 
                 <div class="col-lg-6 col-md-5">
-                    <p>Results for: <a href="#">Listings</a></p>
+                    {% if search_include|is_valid_param %}
+                    <p>Results for: <a href="">{{search_include}}</a></p>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -74,9 +76,9 @@
                                         <select class="form-control" name="state_include">
                                             {% if state_include|is_valid_param %}<option value="{{state_include}}">{{state_include}}</option>{% else %}<option value="">State</option>{% endif %}
                                             <option value="">None</option>
-                                            <option>Delhi NCR</option>
+                                            <option>Delhi</option>
                                             <option>Maharastra</option>
-                                            <option>Uttarpradesh</option>
+                                            <option>Uttar Pradesh</option>
                                         </select>
                                     </div>
                                 </div>
@@ -108,37 +110,8 @@
 
             <div class="col-lg-8">
                 <div class="listing-widget-into">
-                    <div class="row align-items-center">
-                        <div class="col-lg-9 col-sm-9">
-                            <div class="listing-right-form">
-                                <div class="row">
-                                    <div class="form-group">
-                                        <label>Sort by:</label>
-                                    </div>
-                                    <div class="col-lg-7 col-sm-8">
-                                        <div class="form-group">
-                                            <i class='flaticon-filter'></i>
-                                            <select class="form-control">
-                                                <option>All Listing Type</option>
-                                                <option>Restaurants</option>
-                                                <option>Events</option>
-                                                <option>Hotels</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-3">
-                            <ul class="listing-widget-menu">
-                                <li><a href="#" class="active"><i class="flaticon-filter"></i></a></li>
-                                <li><a href="#"><i class="flaticon-menu"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
                     <div class="row">
-                        {% for college in colleges %}
+                        {% for college in colleges.object_list %}
                         <div class="col-lg-6 col-md-6">
                             <div class="place-list-item">
                                 <div class="images">
@@ -146,9 +119,7 @@
                                         <img src="{{college.image.url}}" alt="Images">
                                     </a>
 
-                                    <div class="place-profile">
-                                        <h3>By, {{college.author.name}}</h3>
-                                    </div>
+                                   
                                     <div class="place-status bg-dark-orange">
                                         <a href="listing-details.html">
                                             <h3>Open Now</h3>
@@ -183,10 +154,19 @@
                         </div>
                         {% endfor %}
                         <div class="col-lg-12 text-center">
-                            <a href="#" class="default-btn border-radius">
-                                Load More
-                                <i class='bx bx-plus'></i>
-                            </a>
+                            <div class="pagination-area text-center">
+                                {%if colleges.has_previous %} 
+                                <a href="?page={{colleges.previous_page_number}}&search_include={{search_include}}&type_include={{type_include}}&state_include={{state_include}}&city_include={{city_include}}" class="prev page-numbers">
+                                    <i class="bx bx-chevron-left"></i>
+                                </a>
+                                {% endif %}
+                                <span class="page-numbers current" aria-current="page">{{colleges.number}}</span>
+                                {%if colleges.has_next %}
+                                <a href="?page={{colleges.next_page_number}}&search_include={{search_include}}&type_include={{type_include}}&state_include={{state_include}}&city_include={{city_include}}" class="next page-numbers">
+                                    <i class="bx bx-chevron-right"></i>
+                                </a> 
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
