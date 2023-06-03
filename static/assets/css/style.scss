@@ -1821,8 +1821,9 @@ Category Area
         a {
             i {
                 &::after {
-                    left: auto;
-                    right: 10px; 
+                    // left: auto;
+                    // right: 10px; 
+                    border-radius: 57% 43% 37% 63% / 56% 46% 54% 44%;
                 }
             }
         }

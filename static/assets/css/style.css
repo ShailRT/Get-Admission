@@ -36,6 +36,11 @@ Default CSS
   --transition: .5s;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 100px);
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -2131,7 +2136,14 @@ Category Area
 
 .category-box-card:hover a i::after {
   left: auto;
-  right: 10px;
+  right: 10px;     
+  /* border-radius: 57% 43% 37% 63% / 56% 46% 54% 44%; 
+  color: var(--titleColor);
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  top: -15px;
+  left: -30px; */
 }
 
 .category-box-card:hover h3 a {
@@ -2177,6 +2189,9 @@ Category Area
   color: var(--titleColor);
   -webkit-transition: var(--transition);
   transition: var(--transition);
+}
+.cstm_font {
+  font-weight: 100;
 }
 
 /*=================================
@@ -8102,7 +8117,6 @@ Animation  CSS End
 =================================*/
 /*# sourceMappingURL=style.css.map */
 
-<<<<<<< HEAD
 .college-table {
 	font-weight: 400;
 	font-size: 15px;
@@ -8117,5 +8131,3 @@ Animation  CSS End
 .college-table td{
     padding: 5px 0;
 }
-=======
->>>>>>> fdca7a8a5c673f648ba7cf1bea99242b73e52c19

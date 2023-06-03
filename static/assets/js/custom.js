@@ -403,3 +403,7 @@
     });
 
 })(jQuery);
+
+//custom js --- college+ / college plus
+const navigationHeight = document.querySelector('.main-nav').offsetHeight;
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 20 + 'px')
