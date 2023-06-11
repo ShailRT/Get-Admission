@@ -4873,7 +4873,6 @@ Blog Area End
 }
 
 .blog-article .article-content .content-text::before {
-  content: 'D';
   position: absolute;
   font-size: 100px;
   color: var(--titleColor);
@@ -4883,7 +4882,7 @@ Blog Area End
 }
 
 .blog-article .article-content .content-text p {
-  margin-left: 75px;
+  
   margin-bottom: 10px;
 }
 

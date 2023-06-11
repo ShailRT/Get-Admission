@@ -46,6 +46,22 @@ class College(models.Model):
     def __str__(self):
         return self.title
 
+class Course(models.Model):
+    title = models.CharField(max_length=120)
+    slug = models.SlugField()
+    image = models.ImageField(upload_to='header')
+    description = RichTextField()
+    course_fees = RichTextField()
+    placement = RichTextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-date_created']
+
+    def __str__(self):
+        return self.title
+
+
 
 
 

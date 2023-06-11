@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import College
+from .models import College , Course
 from django.core.paginator import Paginator
+
 
 from core.forms import CommentForm
 
@@ -60,3 +61,18 @@ def college_list(request):
     }
 
     return render(request, 'college-listing.html', context)
+
+def course_detail(request, pk):
+    form = CommentForm(request.POST or None)
+    if form.is_valid():
+        form.save() 
+    course = Course.objects.filter(slug=pk).first()
+    popular_courses = Course.objects.all()[:2]
+
+    context = {
+        'course': course,
+        'popular_courses': popular_courses,
+        'form': form,
+    }
+
+    return render(request, 'course.html', context)

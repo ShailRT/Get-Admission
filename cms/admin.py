@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Gallery, Author, College
+from .models import Gallery, Author, College , Course
 
 class CollegeAdmin(admin.ModelAdmin):
     search_fields = ['title', 'location']
@@ -9,3 +9,4 @@ class CollegeAdmin(admin.ModelAdmin):
 admin.site.register(Gallery)
 admin.site.register(Author)
 admin.site.register(College, CollegeAdmin)
+admin.site.register(Course)
