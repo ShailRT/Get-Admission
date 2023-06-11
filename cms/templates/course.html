@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="inner-banner-title text-center">
                     <h3>{{course.title|upper}}</h3>
-                    <p>News pariatur Excepteur sint occaecat iat nulla pariatur Excepteur </p>
+                    <p>{{course.intro}}</p>
                 </div>
                 
                 <div class="banner-list">
@@ -87,7 +87,7 @@
                                     </li>
                                     <li>
                                         <a href="#placement-section">
-                                            PLACEMENT
+                                            COLLEGES
                                         </a>
                                     </li>
                                     <li>
@@ -116,8 +116,8 @@
                                 </a>
                             </div>
                             <div class="listing-widget listing-widget-desc" id="placement-section">
-                                <h3 class="title">Placement</h3>
-                                    {{course.placement|safe}}
+                                <h3 class="title">COLLEGES</h3>
+                                    {{course.college|safe}}
                                 <a href="tel:+91 089293 94101" class="default-btn border-radius">
                                     Call Us
                                     <i class="bx bx-plus"></i>
