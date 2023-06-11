@@ -48,11 +48,12 @@ class College(models.Model):
 
 class Course(models.Model):
     title = models.CharField(max_length=120)
+    intro = models.CharField(max_length=220)
     slug = models.SlugField()
     image = models.ImageField(upload_to='header')
     description = RichTextField()
     course_fees = RichTextField()
-    placement = RichTextField()
+    college = RichTextField()
     date_created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
