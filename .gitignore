@@ -1,4 +1,6 @@
 # created by virtualenv automatically
+__pycache__/
+*.py[cod]
 Lib
 Scripts
 pyvenv.cfg
