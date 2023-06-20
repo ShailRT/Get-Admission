@@ -8130,3 +8130,11 @@ Animation  CSS End
 .college-table td{
     padding: 5px 0;
 }
+
+.popular-colleges-link{
+  color: var(--titleColor);
+}
+
+.popular-colleges-link:hover{
+  color: var(--mainColor)
+}

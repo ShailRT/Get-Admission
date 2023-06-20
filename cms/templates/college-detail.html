@@ -312,7 +312,7 @@
                                 <h3 class="price-title">Price : <span>{{college.fee_range}}</span></h3>
                             </div>
 
-                            <div class="listing-widget-side">
+                            <!-- <div class="listing-widget-side">
                                 <h3 class="title">Posted by :</h3>
                                 <div class="listing-side-host">
                                     <img src="{{college.author.image.url}}" alt="Images">
@@ -327,7 +327,7 @@
                                         <a href="#"><i class='bx bx-envelope'></i></a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
 
                             <div class="listing-widget-side listing-blog-post">
                                 <h3 class="title">Popular Colleges</h3>
@@ -338,8 +338,8 @@
                                             <img src="{{popular.image.url}}" alt="Images">
                                         </div>
                                         <div class="content">
-                                            <span>{{popular.institute_type}}</span>
-                                            <h4>{{popular.title}}</h4>
+                                            <a class="" href="" style="color:black">{{popular.institute_type}}</a>
+                                            <h4><a class="popular-colleges-link" href="/college/{{popular.slug}}">{{popular.title}}</a></h4>
                                             <p>
                                                 <i class="flaticon-cursor"></i> 
                                                 {{popular.location}}
