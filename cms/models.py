@@ -23,6 +23,7 @@ class Author(models.Model):
 
 class College(models.Model):
     title = models.CharField(max_length=120)
+    meta_description = models.TextField(blank=True, null=True)
     institute_type = models.CharField(max_length=120, choices=type_choices, default='college')
     slug = models.SlugField()
     image = models.ImageField(upload_to='header')
@@ -48,6 +49,7 @@ class College(models.Model):
 
 class Course(models.Model):
     title = models.CharField(max_length=120)
+    meta_description = models.TextField(blank=True, null=True)
     intro = models.CharField(max_length=220)
     slug = models.SlugField()
     image = models.ImageField(upload_to='header')

@@ -6,6 +6,7 @@ from cms.models import Author
 
 class Blog(models.Model):
     title = models.CharField(max_length=120)
+    meta_description = models.TextField(blank=True, null=True)
     intro = models.TextField(blank=True, null=True)
     slug = models.SlugField()
     image = models.ImageField(upload_to='blog')
