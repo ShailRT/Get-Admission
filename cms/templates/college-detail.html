@@ -6,314 +6,344 @@
 {% block title %} Get Admission - {{college.title}} {% endblock title %}
 {% block meta_description %}{{college.meta_description}}{% endblock meta_description %}
 {% block content %}
-        <!-- Inner Banner -->
-        <div class="inner-banner inner-bg2" style="background-image: url({{college.image.url}})">
-            <div class="container">
-                <div class="inner-content">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8">
-                            <div class="inner-banner-text">
-                                <h3>{{college.title}}</h3>
-                                <ul>
-                                    <li>
-                                        <i class="flaticon-cursor"></i>
-                                        {{college.location}}
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-telephone"></i>
-                                        <a href="tel:{{college.phone}}">
-                                            {{college.phone}}
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="flaticon-email-1"></i>
-                                        <a href="mailto:{{college.email}}">
-                                            {{college.email}}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="banner-rating">
-                                <ul>
-                                    <li class="rating-star">
-                                        {% for _ in college.star_count|times %}
-                                        <i class='bx bxs-star'></i>
-                                        {% endfor %}
-                                        <span>By Experts</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">{{college.rating}}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+<!-- Inner Banner -->
+<div class="inner-banner inner-bg2" style="background-image: url({{college.image.url}})">
+    <div class="container">
+        <div class="inner-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="inner-banner-text">
+                        <h3>{{college.title}}</h3>
+                        <ul>
+                            <li>
+                                <i class="flaticon-cursor"></i>
+                                {{college.location}}
+                            </li>
+                            <li>
+                                <i class="flaticon-telephone"></i>
+                                <a href="tel:{{college.phone}}">
+                                    {{college.phone}}
+                                </a>
+                            </li>
+                            <li>
+                                <i class="flaticon-email-1"></i>
+                                <a href="mailto:{{college.email}}">
+                                    {{college.email}}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="banner-bottom">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="banner-tag">
-                                <ul>
-                                    <li>
-                                        <a href="#connect-form">
-                                            <i class="flaticon-writing"></i>
-                                            Inquire Now  
-                                        </a>                                    
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="banner-profile">
-                                <img src="{{college.author.image.url}}" alt="Images">
-                                <h3>By, {{college.author.name}}</h3>
-                                <div class="banner-status">
-                                    <a href="listing-details.html"><h3>Open Now</h3></a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-4">
+                    <div class="banner-rating">
+                        <ul>
+                            <li class="rating-star">
+                                {% for _ in college.star_count|times %}
+                                <i class='bx bxs-star'></i>
+                                {% endfor %}
+                                <span>By Experts</span>
+                            </li>
+                            <li>
+                                <a href="#">{{college.rating}}</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="banner-list">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-7">
-                            <ul class="list">
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                </li>
-                                <li>College</li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                </li>
-                                <li class="active">{{college.title}}</li>
-                            </ul>
-                        </div>
+            </div>
+        </div>
 
-                        <div class="col-lg-6 col-md-5">
-                            <ul class="social-link">
-                                <li>
-                                    <a href="https://www.facebook.com/Rudraconsultancy1/" target="_blank"><i class='bx bxl-facebook'></i></a>
-                                </li> 
-                                <li>
-                                    <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
-                                </li> 
-                                <li>
-                                    <a href="https://www.instagram.com/getadmission_/?hl=en" target="_blank"><i class='bx bxl-instagram'></i></a>
-                                </li> 
-                                <li>
-                                    <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
-                                </li> 
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UCDD4UtZCvFrBe3kzMS_N5lw" target="_blank"><i class='bx bxl-youtube'></i></a>
-                                </li> 
-                            </ul>
+        <div class="banner-bottom">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="banner-tag">
+                        <ul>
+                            <li>
+                                <a href="#connect-form">
+                                    <i class="flaticon-writing"></i>
+                                    Inquire Now
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="banner-profile">
+                        <img src="{{college.author.image.url}}" alt="Images">
+                        <h3>By, {{college.author.name}}</h3>
+                        <div class="banner-status">
+                            <a href="listing-details.html">
+                                <h3>Open Now</h3>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Inner Banner End -->
 
-        <!-- Listing Details Area -->
-        <div class="listing-details-area pt-100 pb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="listing-details-wrap">
-                            <div class="listing-category" >
-                                <ul >
-                                    <li>
-                                        <a href="#description-section">
-                                            DETAILS
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#gallery-section">
-                                            GALLERY
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#fees-section">
-                                            COURSE & FEES
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#placement-section">
-                                            PLACEMENT
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#connect-form">
-                                            REVIEWS
-                                        </a>
-                                    </li>
-                                </ul>
+        <div class="banner-list">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-7">
+                    <ul class="list">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <i class='bx bx-chevron-right'></i>
+                        </li>
+                        <li>College</li>
+                        <li>
+                            <i class='bx bx-chevron-right'></i>
+                        </li>
+                        <li class="active">{{college.title}}</li>
+                    </ul>
+                </div>
 
-                            </div>
+                <div class="col-lg-6 col-md-5">
+                    <ul class="social-link">
+                        <li>
+                            <a href="https://www.facebook.com/Rudraconsultancy1/" target="_blank"><i
+                                    class='bx bxl-facebook'></i></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/getadmission_/?hl=en" target="_blank"><i
+                                    class='bx bxl-instagram'></i></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCDD4UtZCvFrBe3kzMS_N5lw" target="_blank"><i
+                                    class='bx bxl-youtube'></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Inner Banner End -->
 
-                            <div class="listing-widget listing-widget-desc" id="description-section">
-                                <h3 class="title">Description</h3>
-                                <p> 
-                                    {{college.description|safe}}
-                                </p>
-                                <a href="tel:+91 089293 94101" class="default-btn border-radius" >
-                                    Call Us
-                                    <i class='bx bx-plus'></i>
+<!-- Listing Details Area -->
+<div class="listing-details-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="listing-details-wrap">
+                    <div class="listing-category">
+                        <ul>
+                            <li>
+                                <a href="#description-section">
+                                    DETAILS
                                 </a>
-                            </div>
-
-                            <div class="listing-widget gallery-slider" id="gallery-section">
-                                <h3 class="title">Gallery / Photos</h3>
-                                <div class="gallery-slider-area owl-carousel owl-theme">
-                                    {% for gal in college.gallery.all %}
-                                    <div class="Gallery-item">
-                                        <img src="{{gal.image.url}}" alt="Images">
-                                    </div>
-                                    {% endfor %}
-                                    
-                                </div>
-                            </div>
-
-                            <div class="listing-widget listing-widget-desc" id="fees-section">
-                                <h3 class="title">Course & Fees</h3>
-                                <p> 
-                                    {{college.course_fees|safe}}
-                                </p>
-                                <a href="tel:+91 089293 94101" class="default-btn border-radius" >
-                                    Call Us
-                                    <i class='bx bx-plus'></i>
+                            </li>
+                            <li>
+                                <a href="#gallery-section">
+                                    GALLERY
                                 </a>
-                            </div>
-
-                            <div class="listing-widget listing-widget-desc" id="placement-section">
-                                <h3 class="title">Placement</h3>
-                                <p> 
-                                    {{college.placement|safe}}
-                                </p>
-                                <a href="tel:+91 089293 94101" class="default-btn border-radius" >
-                                    Call Us
-                                    <i class='bx bx-plus'></i>
+                            </li>
+                            <li>
+                                <a href="#fees-section">
+                                    COURSE & FEES
                                 </a>
+                            </li>
+                            <li>
+                                <a href="#placement-section">
+                                    PLACEMENT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#connect-form">
+                                    REVIEWS
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="listing-widget listing-widget-desc" id="description-section">
+                        <h3 class="title">Description</h3>
+                        <p>
+                            {{college.description|safe}}
+                        </p>
+                        <a href="tel:+91 089293 94101" class="default-btn border-radius">
+                            Call Us
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </div>
+
+                    <div class="listing-widget gallery-slider" id="gallery-section">
+                        <h3 class="title">Gallery / Photos</h3>
+                        <div class="gallery-slider-area owl-carousel owl-theme">
+                            {% for gal in college.gallery.all %}
+                            <div class="Gallery-item">
+                                <img src="{{gal.image.url}}" alt="Images">
                             </div>
+                            {% endfor %}
 
-
-                            <div class="listing-widget-contact d-none d-lg-block" id="connect-form">
-                                <div class="listing-contact-title">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="listing-widget-mail">
-                                                <i class="flaticon-email-2"></i>
-                                                <div class="content">
-                                                    <h3>Let's Connect</h3>
-                                                    <span>Show Us Your Intrest</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="contact-form d-none d-lg-block">
-                                    <form method="POST" action=".">
-                                        {% csrf_token %}
-                                        <div class="row">
-                                            <div class="col-lg-6 col-sm-6">
-                                                <div class="form-group">
-                                                    <i class='bx bx-user'></i>
-                                                    <input type="text" name="{{form.name.html_name}}" class="form-control" required data-error="Please enter name*" placeholder="Name*">
-                                                </div>
-                                            </div>
-                
-                                            <div class="col-lg-6 col-sm-6">
-                                                <div class="form-group">
-                                                    <i class='bx bx-mail-send'></i>
-                                                    <input type="email" name="{{form.email.html_name}}"  class="form-control" required data-error="Please enter your email" placeholder="Your Address*">
-                                                </div>
-                                            </div>
-                
-                                            <div class="col-lg-12 col-md-12">
-                                                <div class="form-group">
-                                                    <i class='bx bx-envelope'></i>
-                                                    <textarea name="{{form.message.html_name}}" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                                </div>
-                                            </div>
-                
-                                            <div class="col-lg-12 col-md-12">
-                                                <button type="submit" class="default-btn border-radius">
-                                                    Post A Comment
-                                                    <i class='bx bx-plus'></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
-                        <div class="listing-details-side">
-                            <div class="listing-widget-side">
-                                <h3 class="title">Send Your Query</h3>
-                                <div class="listing-Booking-form">
-                                    <form method="POST" action=".">
-                                        {% csrf_token %}
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <i class='bx bx-user'></i>
-                                                    <input type="text" name="{{form.name.html_name}}" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name*">
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <i class='flaticon-email-2'></i>
-                                                    <input type="email" name="{{form.email.html_name}}" id="email" class="form-control" required data-error="Please enter your email" placeholder="E-mail*">
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <i class='bx bx-phone'></i>
-                                                    <input type="text" name="{{form.phone.html_name}}" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
-                                                </div>
-                                            </div>
+                    <div class="listing-widget listing-widget-desc" id="fees-section">
+                        <h3 class="title">Course & Fees</h3>
+                        <p>
+                            {{college.course_fees|safe}}
+                        </p>
+                        <a href="tel:+91 089293 94101" class="default-btn border-radius">
+                            Call Us
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </div>
+
+                    <div class="listing-widget listing-widget-desc" id="placement-section">
+                        <h3 class="title">Placement</h3>
+                        <p>
+                            {{college.placement|safe}}
+                        </p>
+                        <a href="tel:+91 089293 94101" class="default-btn border-radius">
+                            Call Us
+                            <i class='bx bx-plus'></i>
+                        </a>
+                    </div>
+
+
+                    <div class="listing-widget-contact d-none d-lg-block" id="connect-form">
+                        <div class="listing-contact-title">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="listing-widget-mail">
+                                        <i class="flaticon-email-2"></i>
+                                        <div class="content">
+                                            <h3>Let's Connect</h3>
+                                            <span>Show Us Your Intrest</span>
                                         </div>
-                                        <div class="col-lg-12 col-md-12 text-center">
-                                            <button type="submit" class="default-btn border-radius">
-                                                Send Message
-                                                <i class='bx bx-plus'></i>
-                                            </button>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
+
                             </div>
+                        </div>
+                        <div class="contact-form d-none d-lg-block">
+                            <form method="POST" action=".">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <i class='bx bx-user'></i>
+                                            <input type="text" name="{{form.name.html_name}}" id="name"
+                                                class="form-control" required data-error="Please enter your name"
+                                                placeholder="Your Name*">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <i class='bx bx-phone'></i>
+                                            <input type="tel" name="{{form.phone.html_name}}" id="phone_number" required
+                                                data-error="Please enter your number" class="form-control"
+                                                placeholder="Your Phone" pattern="[0-9]{10}">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-6">
+                                        <div class="form-group">
+                                            <i class='bx bx-mail-send'></i>
+                                            <input type="email" name="{{form.email.html_name}}" id="email"
+                                                class="form-control" required data-error="Please enter your email"
+                                                placeholder="E-mail*">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <i class='bx bx-envelope'></i>
+                                            <textarea name="{{form.message.html_name}}" class="form-control"
+                                                id="message" cols="30" rows="8" required data-error="Write your message"
+                                                placeholder="Your Message"></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn border-radius">
+                                            Send Message
+                                            <i class='bx bx-plus'></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="listing-details-side">
+                    <div class="listing-widget-side">
+                        <h3 class="title">Send Your Query</h3>
+                        <div class="listing-Booking-form">
+                            <form method="POST" action=".">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <i class='bx bx-user'></i>
+                                            <input type="text" name="{{form.name.html_name}}" id="name"
+                                                class="form-control" required data-error="Please enter your name"
+                                                placeholder="Your Name*">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <i class='flaticon-email-2'></i>
+                                            <input type="email" name="{{form.email.html_name}}" id="email"
+                                                class="form-control" required data-error="Please enter your email"
+                                                placeholder="E-mail*">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <i class='bx bx-phone'></i>
+                                            <input type="text" name="{{form.phone.html_name}}" id="phone_number"
+                                                required data-error="Please enter your number" class="form-control"
+                                                placeholder="Your Phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 text-center">
+                                    <button type="submit" class="default-btn border-radius">
+                                        Send Message
+                                        <i class='bx bx-plus'></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
 
-                            <div class="listing-widget-side">
-                                <h3 class="title">Contact</h3>
-                                <ul class="listing-widget-list">
-                                    <li>Address : <span> {{college.location}}</span></li>
-                                    <li>Phone : <span><a href="tel:+91 {{college.email}}">{{college.phone}}</a></span></li>
-                                    <li>Mail : <span><a href="mailto:{{college.email}}">{{college.email}}</a></span></li>
-                                    <li>Website : <span> <a href="https://downtown.com">{{college.website}}</a></span></li>
-                                </ul>
-                            </div>
+                    <div class="listing-widget-side">
+                        <h3 class="title">Contact</h3>
+                        <ul class="listing-widget-list">
+                            <li>Address : <span> {{college.location}}</span></li>
+                            <li>Phone : <span><a href="tel:+91 {{college.email}}">{{college.phone}}</a></span></li>
+                            <li>Mail : <span><a href="mailto:{{college.email}}">{{college.email}}</a></span></li>
+                            <li>Website : <span> <a href="https://downtown.com">{{college.website}}</a></span></li>
+                        </ul>
+                    </div>
 
-                            <div class="listing-widget-side">
-                                <h3 class="title">Fees Range</h3>
-                                <h3 class="price-title">Price : <span>{{college.fee_range}}</span></h3>
-                            </div>
+                    <div class="listing-widget-side">
+                        <h3 class="title">Fees Range</h3>
+                        <h3 class="price-title">Price : <span>{{college.fee_range}}</span></h3>
+                    </div>
 
-                            <!-- <div class="listing-widget-side">
+                    <!-- <div class="listing-widget-side">
                                 <h3 class="title">Posted by :</h3>
                                 <div class="listing-side-host">
                                     <img src="{{college.author.image.url}}" alt="Images">
@@ -330,32 +360,114 @@
                                 </ul>
                             </div> -->
 
-                            <div class="listing-widget-side listing-blog-post">
-                                <h3 class="title">Popular Colleges</h3>
-                                <ul class="listing-widget-post">
-                                    {% for popular in popular_colleges %}
-                                    <li>
-                                        <div class="img">
-                                            <img src="{{popular.image.url}}" alt="Images">
-                                        </div>
-                                        <div class="content">
-                                            <a class="" href="" style="color:black">{{popular.institute_type}}</a>
-                                            <h4><a class="popular-colleges-link" href="/college/{{popular.slug}}">{{popular.title}}</a></h4>
-                                            <p>
-                                                <i class="flaticon-cursor"></i> 
-                                                {{popular.location}}
-                                            </p>
-                                        </div>
-                                    </li>
-                                    {%endfor %}
-                                    
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="listing-widget-side listing-blog-post">
+                        <h3 class="title">Popular Colleges</h3>
+                        <ul class="listing-widget-post">
+                            {% for popular in popular_colleges %}
+                            <li>
+                                <div class="img">
+                                    <img src="{{popular.image.url}}" alt="Images">
+                                </div>
+                                <div class="content">
+                                    <a class="" href="" style="color:black">{{popular.institute_type}}</a>
+                                    <h4><a class="popular-colleges-link"
+                                            href="/college/{{popular.slug}}">{{popular.title}}</a></h4>
+                                    <p>
+                                        <i class="flaticon-cursor"></i>
+                                        {{popular.location}}
+                                    </p>
+                                </div>
+                            </li>
+                            {%endfor %}
+
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Listing Details Area End -->
+    </div>
+</div>
+<!-- Listing Details Area End -->
 
+<!-- Modal -->
+<div class="modal contact-modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="listing-contact-title border-0 p-0">
+                    <div class="row">
+                        <div class="col">
+                            <div class="listing-widget-mail">
+                                <i class="flaticon-email-2"></i>
+                                <div class="content">
+                                    <h3>Let's Connect</h3>
+                                    <span>Show Us Your Intrest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                <button type="button" class="default-btn border-radius fw-bold" id="modalClose">X</button>
+            </div>
+            <div class="modal-body">
+                <div class="contact-form p-0">
+                    <form method="POST" action=".">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="form-group">
+                                    <i class='bx bx-user'></i>
+                                    <input type="text" name="{{form.name.html_name}}" id="name" class="form-control"
+                                        required data-error="Please enter your name" placeholder="Your Name*">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="form-group">
+                                    <i class='bx bx-phone'></i>
+                                    <input type="tel" name="{{form.phone.html_name}}" id="phone_number" required
+                                        data-error="Please enter your number" class="form-control"
+                                        placeholder="Your Phone" pattern="[0-9]{10}">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-sm-6">
+                                <div class="form-group">
+                                    <i class='bx bx-mail-send'></i>
+                                    <input type="email" name="{{form.email.html_name}}" id="email" class="form-control"
+                                        required data-error="Please enter your email" placeholder="E-mail*">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <i class='bx bx-envelope'></i>
+                                    <textarea name="{{form.message.html_name}}" class="form-control" id="message"
+                                        cols="30" rows="8" required data-error="Write your message"
+                                        placeholder="Your Message"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="default-btn border-radius">
+                    Send Message
+                    <i class='bx bx-plus'></i>
+                </button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'assets/js/pop-up-modal-college.js' %}"></script>
+{% endblock scripts %}

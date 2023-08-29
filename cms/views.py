@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import College , Course
 from django.core.paginator import Paginator
+from django.contrib import messages
 
 
 from core.forms import CommentForm
@@ -13,6 +14,7 @@ def college_detail(request, pk):
     form = CommentForm(request.POST or None)
     if form.is_valid():
         form.save() 
+        messages.success(request, 'Your Form is Successfully Submited')
     college = College.objects.filter(slug=pk).first()
     popular_colleges = College.objects.all()[:2]
 

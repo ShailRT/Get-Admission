@@ -8139,3 +8139,7 @@ Animation  CSS End
 .popular-colleges-link:hover{
   color: var(--mainColor)
 }
+
+.contact-modal-bg{
+  background-color: rgba(0, 0, 0, 0.4);
+}
