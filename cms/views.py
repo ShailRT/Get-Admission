@@ -11,11 +11,13 @@ def is_valid_param(param):
 
 
 def college_detail(request, pk):
+    college = College.objects.filter(slug=pk).first()
     form = CommentForm(request.POST or None)
     if form.is_valid():
-        form.save() 
+        message = form.save(commit=False)
+        message.college = college
+        message.save()
         messages.success(request, 'Your Form is Successfully Submited')
-    college = College.objects.filter(slug=pk).first()
     popular_colleges = College.objects.all()[:2]
 
     context = {

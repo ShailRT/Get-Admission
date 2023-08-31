@@ -1,5 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 
 
 type_choices =(
@@ -27,6 +29,7 @@ class College(models.Model):
     institute_type = models.CharField(max_length=120, choices=type_choices, default='college')
     slug = models.SlugField()
     image = models.ImageField(upload_to='header')
+    thumbnail = ImageSpecField(source='image', processors=[ResizeToFill(416, 197)], format="PNG", options={'quality': 60})
     location = models.CharField(max_length=150)
     phone = models.CharField(max_length=12)
     email = models.EmailField()
