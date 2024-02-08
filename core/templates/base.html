@@ -12,7 +12,8 @@
         content="{% block meta_description %}Get Admission Noida Direct Admission GetAdmission{% endblock meta_description %}">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css'%}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css'%}">
@@ -36,7 +37,9 @@
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     {% block style %} {% endblock style %}
 
@@ -64,161 +67,261 @@
                     <a class="navbar-brand" href="/">
                         <img src="{% static 'assets/img/logo/logo.png'%}" alt="Logo" class="p-0">
                     </a>
-
-                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav m-auto">
-                            <li class="nav-item">
-                                <a href="/" class="nav-link active">
-                                    Home
-                                </a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <form class="form-inline mt-4 mb-2 d-sm-none" action="#" id="searchcollapsed">
+                            <div class="input-label-absolute input-label-absolute-left w-100">
+                                <label class="label-absolute" for="searchcollapsed_search"><i
+                                        class="fa fa-search"></i><span class="sr-only">What are you looking
+                                        for?</span></label>
+                                <input class="form-control form-control-sm border-0 shadow-0 bg-gray-200"
+                                    id="searchcollapsed_search" placeholder="Search" aria-label="Search" type="search">
+                            </div>
+                        </form>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle " id="homeDropdownMenuLink"
+                                    href="index.html" data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Home</a>
+                                <div class="dropdown-menu" aria-labelledby="homeDropdownMenuLink"><a
+                                        class="dropdown-item" href="index.html">Rooms</a><a class="dropdown-item"
+                                        href="index-2.html">Restaurants</a><a class="dropdown-item"
+                                        href="index-3.html">Travel</a><a class="dropdown-item" href="index-4.html">Real
+                                        Estate <span class="badge badge-info-light ms-1 mt-n1">New</span></a></div>
                             </li>
-                            <li class="nav-item">
-                                <a href="/about" class="nav-link">
-                                    About
-                                </a>
+                            <!-- Megamenu-->
+                            <li class="nav-item dropdown position-static"><a class="nav-link dropdown-toggle"
+                                    href="#" data-bs-toggle="dropdown" aria-expanded="true">Template</a>
+                                <div class="dropdown-menu megamenu py-lg-0"
+                                    style="transform: translateY(0px);" data-bs-popper="static">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <div class="row p-3 pe-lg-0 ps-lg-5 pt-lg-5">
+                                                <div class="col-lg-3">
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">Homepage</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="index.html">Rooms </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="index-2.html">Restaurants </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="index-3.html">Travel </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="index-4.html">Real estate <span
+                                                                    class="badge badge-info-light ms-1">New</span> </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">Restaurants</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="category.html">Category - Map on the top </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="category-2.html">Category - Map on the right </a>
+                                                        </li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="category-3.html">Category - no map </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="detail.html">Restaurant detail </a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">Rooms</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="category-rooms.html">Category - Map on the top
+                                                            </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="category-2-rooms.html">Category - Map on the right
+                                                            </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="category-3-rooms.html">Category - no map </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="detail-rooms.html">Room detail </a></li>
+                                                    </ul>
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">Blog</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="blog.html">Blog </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="post.html">Post </a></li>
+                                                    </ul>
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">Pages</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="compare.html">Comparison </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="team.html">Team </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="contact.html">Contact </a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">Pages</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="pricing.html">Pricing </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="text.html">Text page </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="faq.html">F.A.Q.s </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="coming-soon.html">Coming soon </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="404.html">404 page </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="knowledge-base.html">Knowledge Base <span
+                                                                    class="badge badge-info-light ms-1">New</span> </a>
+                                                        </li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="knowledge-base-topic.html">Knowledge Base —
+                                                                Topic<span
+                                                                    class="badge badge-info-light ms-1">New</span> </a>
+                                                        </li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="terms.html">Terms &amp; Conditions <span
+                                                                    class="badge badge-info-light ms-1">New</span> </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">Host</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-add-0.html">Add new listing - 6 pages </a>
+                                                        </li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-list.html">Bookings — list view </a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <!-- Megamenu list-->
+                                                    <h6 class="text-uppercase">User</h6>
+                                                    <ul class="megamenu-list list-unstyled">
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-profile.html">Profile </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-account.html">Account </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-personal.html">Personal info - forms </a>
+                                                        </li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-security.html">Password &amp; security -
+                                                                forms </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="login.html">Sign in </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="signup.html">Sign up </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-booking-1.html">Booking process - 4 pages
+                                                            </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-grid.html">Bookings — grid view </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-booking-detail.html">Booking detail </a></li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-invoice.html">Invoice <span
+                                                                    class="badge badge-info-light ms-1">New</span> </a>
+                                                        </li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-messages.html">Messages <span
+                                                                    class="badge badge-info-light ms-1">New</span> </a>
+                                                        </li>
+                                                        <li class="megamenu-list-item"><a class="megamenu-list-link"
+                                                                href="user-messages-detail.html">Message Detail <span
+                                                                    class="badge badge-info-light ms-1">New</span> </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="row megamenu-services d-none d-lg-flex ps-lg-5">
+                                                <div class="col-xl-3 col-lg-6 d-flex">
+                                                    <div class="megamenu-services-item">
+                                                        <svg class="svg-icon megamenu-services-icon">
+                                                            <use xlink:href="#destination-map-1"> </use>
+                                                        </svg>
+                                                        <div>
+                                                            <h6 class="text-uppercase">Best rentals</h6>
+                                                            <p class="mb-0 text-muted text-sm">Find the perfect place
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-6 d-flex">
+                                                    <div class="megamenu-services-item">
+                                                        <svg class="svg-icon megamenu-services-icon">
+                                                            <use xlink:href="#money-box-1"> </use>
+                                                        </svg>
+                                                        <div>
+                                                            <h6 class="text-uppercase">Earn points</h6>
+                                                            <p class="mb-0 text-muted text-sm">And get great rewards</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-6 d-flex">
+                                                    <div class="megamenu-services-item">
+                                                        <svg class="svg-icon megamenu-services-icon">
+                                                            <use xlink:href="#customer-support-1"> </use>
+                                                        </svg>
+                                                        <div>
+                                                            <h6 class="text-uppercase">020-800-456-747</h6>
+                                                            <p class="mb-0 text-muted text-sm">24/7 Available Support
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-6 d-flex">
+                                                    <div class="megamenu-services-item">
+                                                        <svg class="svg-icon megamenu-services-icon">
+                                                            <use xlink:href="#secure-payment-1"> </use>
+                                                        </svg>
+                                                        <div>
+                                                            <h6 class="text-uppercase">Secure Payment</h6>
+                                                            <p class="mb-0 text-muted text-sm">Secure Payment</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 d-none d-lg-block position-relative"><img class="bg-image"
+                                                src="https://d19m59y37dris4.cloudfront.net/directory/2-0-2/img/photo/photo-1521170665346-3f21e2291d8b.jpg"
+                                                alt=""></div>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    College
-                                    <i class='bx bx-plus'></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Engineering
-                                            <i class='bx bx-plus'></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="/college/ggsiu-delhi/" class="nav-link">
-                                                    GGSIPU
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/sharda-greater-noida/" class="nav-link">
-                                                    Sharda University
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/gu-greater-noida/" class="nav-link">
-                                                    Galgotias University
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/chandigarh-punjab/" class="nav-link">
-                                                    Chandigarh University
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Medical
-                                            <i class='bx bx-plus'></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="/college/aiims-delhi/" class="nav-link">
-                                                    AIIMS, Delhi
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/sharda-greater-noida/" class="nav-link">
-                                                    Sharda University
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/niu-noida/" class="nav-link">
-                                                    NIU
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/mamc-delhi/" class="nav-link">
-                                                    Maulana Azad
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Bussiness
-                                            <i class='bx bx-plus'></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="/college/ggsiu-delhi/" class="nav-link">
-                                                    GGSIPU
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/adgit-delhi/" class="nav-link">
-                                                    NIEC
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/iim-bengaluru/" class="nav-link">
-                                                    IIMB
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/chandigarh-punjab/" class="nav-link">
-                                                    Chandigarh University
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            Law
-                                            <i class='bx bx-plus'></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="/college/ggsiu-delhi/" class="nav-link">
-                                                    GGSIPU
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/sharda-greater-noida/" class="nav-link">
-                                                    Sharda University
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/gu-greater-noida/" class="nav-link">
-                                                    Galgotias University
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/college/chandigarh-punjab/" class="nav-link">
-                                                    Chandigarh University
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="/college" class="nav-link">
-                                            <i class='bx bx-search'></i>
-                                            View All
-                                            
-                                        </a>
-                                    </li>
-                                    
-                                </ul>
+                            <!-- /Megamenu end-->
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="/blog" class="nav-link">
-                                    Blog
-                                </a>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle " id="docsDropdownMenuLink"
+                                    href="index.html" data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Docs</a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="docsDropdownMenuLink">
+                                    <h6 class="dropdown-header fw-normal">Documentation</h6><a class="dropdown-item"
+                                        href="docs/docs-introduction.html">Introduction </a><a class="dropdown-item"
+                                        href="docs/docs-directory-structure.html">Directory structure </a><a
+                                        class="dropdown-item" href="docs/docs-gulp.html">Gulp </a><a
+                                        class="dropdown-item" href="docs/docs-customizing-css.html">Customizing CSS
+                                    </a><a class="dropdown-item" href="docs/docs-credits.html">Credits </a><a
+                                        class="dropdown-item" href="docs/docs-changelog.html">Changelog </a>
+                                    <div class="dropdown-divider"></div>
+                                    <h6 class="dropdown-header fw-normal">Components</h6><a class="dropdown-item"
+                                        href="docs/components-bootstrap.html">Bootstrap </a><a class="dropdown-item"
+                                        href="docs/components-directory.html">Theme </a>
+                                </div>
                             </li>
-                            <li class="nav-item">
-                                <a href="/contact" class="nav-link">
-                                    Contact
-                                </a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="login.html">Sign in</a></li>
+                            <li class="nav-item"><a class="nav-link" href="signup.html">Sign up</a></li>
+                            <li class="nav-item mt-3 mt-lg-0 ms-lg-3 d-lg-none d-xl-inline-block"><a
+                                    class="btn btn-primary" href="user-add-0.html">Add a listing</a></li>
                         </ul>
-
                     </div>
+
                 </nav>
+                
             </div>
         </div>
 
@@ -276,6 +379,81 @@
 
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget pl-1">
+                            <h3>BEST COLLEGES</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="/contact">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="/blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="/course/btech">Course</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ's</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Register</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Help & Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget pl-1">
+                            <h3>TOP COURSES</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="/contact">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="/blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="/course/btech">Course</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ's</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Register</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Help & Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget pl-1">
+                            <h3>COLLEGES IN INDIA</h3>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="/contact">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="/blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="/course/btech">Course</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ's</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Register</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Help & Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget pl-1">
                             <h3>SUPPORT</h3>
                             <ul class="footer-list">
                                 <li>
@@ -300,57 +478,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget pl-5">
-                            <h3>QUICK LINKS</h3>
-                            <ul class="footer-list">
-                                <li>
-                                    <a href="/about">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="/college">Colleges</a>
-                                </li>
-                                <li>
-                                    <a href="#">How It Works</a>
-                                </li>
-                                <li>
-                                    <a href="#">FAQ's</a>
-                                </li>
-                                <li>
-                                    <a href="/contact">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="/contact">Apply</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h3>NEWSLETTER</h3>
-                            <p>To get the latest news and latest updates from us</p>
-                            <div class="footer-form">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="form-group">
-                                                <input type="email" name="email" id="email" class="form-control"
-                                                    required data-error="Please enter your email"
-                                                    placeholder="Your Email*">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12">
-                                            <button type="submit" class="default-btn">
-                                                SUBSCRIBE now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -420,8 +547,12 @@
     <!-- Custom JS -->
     <script src="{% static 'assets/js/custom.js'%}"></script>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
     {% block scripts %} {% endblock scripts %}
 </body>
 
