@@ -128,7 +128,14 @@
                                 </div>
 
                                 <div class="content">
-                                    <a href="{% url 'college-detail' pk=college.slug %}">
+                                    <a href="{% url 'college-detail' pk=college.slug %}" class="d-flex align-items-center">
+                                        <img class="avatar avatar-border-white mb-1 college-logo" src="
+                                        {% if college.logo %}
+                                            {{college.logo.url}}
+                                        {% else %}
+                                            https://d19m59y37dris4.cloudfront.net/directory/2-0-2/img/avatar/avatar-0.jpg
+                                        {% endif %}" alt="Ondrej">
+                                        
                                         <h3>{{college.title}}</h3>
                                     </a>
                                     <p>
