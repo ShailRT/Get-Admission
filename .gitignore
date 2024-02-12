@@ -7,3 +7,5 @@ pyvenv.cfg
 bin
 lib 
 .vscode
+*.pyc
+core/templates/base.html

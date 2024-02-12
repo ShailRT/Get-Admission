@@ -20,10 +20,13 @@ def college_detail(request, pk):
         messages.success(request, 'Your Form is Successfully Submited')
     popular_colleges = College.objects.all()[:2]
 
+    courses = college.course
+    
     context = {
         'college': college,
         'popular_colleges': popular_colleges,
         'form': form,
+        'courses': courses,
     }
 
     return render(request, 'college-detail.html', context)

@@ -6,6 +6,51 @@
 {% block title %} Get Admission - {{college.title}} {% endblock title %}
 {% block meta_description %}{{college.meta_description}}{% endblock meta_description %}
 {% block content %}
+<style>
+.card {
+	--bs-card-spacer-y: 1.2rem;
+	--bs-card-spacer-x: 1.2rem;
+	--bs-card-title-spacer-y: 0.5rem;
+	--bs-card-border-width: 1px;
+	--bs-card-border-color: var(--bs-border-color-translucent);
+	--bs-card-border-radius: 0.4rem;
+	--bs-card-box-shadow: ;
+	--bs-card-inner-border-radius: calc(0.4rem - 1px);
+	--bs-card-cap-padding-y: 0.6rem;
+	--bs-card-cap-padding-x: 1.2rem;
+	--bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+	--bs-card-cap-color: ;
+	--bs-card-height: ;
+	--bs-card-color: ;
+	--bs-card-bg: #fff;
+	--bs-card-img-overlay-padding: 1rem;
+	--bs-card-group-margin: 0.75rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	height: var(--bs-card-height);
+	word-wrap: break-word;
+	background-color: var(--bs-card-bg);
+	background-clip: border-box;
+	border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+	border-radius: var(--bs-card-border-radius);
+}
+.card-body {
+	flex: 1 1 auto;
+	padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+	color: var(--bs-card-color);
+}
+.text-block {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e9ecef;
+}
+.text-block:last-of-type {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+</style>
 <!-- Inner Banner -->
 <div class="inner-banner inner-bg2" style="background-image: url({{college.image.url}})">
     <div class="container">
@@ -187,9 +232,38 @@
                         </div>
                     </div>
 
-                    <div class="listing-widget listing-widget-desc" id="fees-section">
+                    <div class="listing-widget listing-widget-desc px-4" id="fees-section">
                         <h3 class="title">Course & Fees</h3>
-
+                        {% for course in courses.all %}
+                            <div class="card border-0 shadow mb-4">
+                                <div class="card-body p-4">
+                                    <div class="text-block pb-3 pt-0">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <h6> <a class="text-reset" href="detail-rooms.html">{{course.title}}</a></h6>
+                                                <p class="text-muted text-sm mb-0 p-0">{{course.specialization}}</p>
+                                                <div class="mt-n1"><i class="fa fa-xs fa-star text-primary"></i><i
+                                                        class="fa fa-xs fa-star text-primary"></i><i
+                                                        class="fa fa-xs fa-star text-primary"></i><i
+                                                        class="fa fa-xs fa-star text-primary"></i><i
+                                                        class="fa fa-xs fa-star text-gray-200"></i>
+                                                </div>
+                                            </div><a href="detail-rooms.html"><img class="ms-3 rounded flex-shrink-0"
+                                                    src="https://d19m59y37dris4.cloudfront.net/directory/2-0-2/img/photo/photo-1512917774080-9991f1c4c750.jpg"
+                                                    alt="" width="100"></a>
+                                        </div>
+                                    </div>
+                                    <div class="text-block pt-3 pb-0">
+                                        <ul class="list-unstyled text-sm mb-0">
+                                            <li class="mb-3"><i class="fas fa-users fa-fw text-muted me-2"></i>{{course.avg_fee}}</li>
+                                            <li class="mb-0"><i class="far fa-calendar fa-fw text-muted me-2"></i>Apr 17,
+                                                2019 <i class="fas fa-arrow-right fa-fw text-muted mx-3"></i>Apr 18, 2019
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
                         <p>
                             {{college.course_fees|safe}}
                         </p>
@@ -391,7 +465,8 @@
 <!-- Listing Details Area End -->
 
 <!-- Modal -->
-<div class="modal contact-modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal contact-modal-bg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -455,7 +530,7 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                 </div>
             </div>
             <div class="modal-footer">
@@ -463,7 +538,7 @@
                     Send Message
                     <i class='bx bx-plus'></i>
                 </button>
-                    </form>
+                </form>
             </div>
         </div>
     </div>
