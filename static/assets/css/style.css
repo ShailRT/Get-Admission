@@ -284,7 +284,7 @@ Navbar Area
 
 /* Main nav */
 .main-nav {
-  position: absolute;
+  position: fixed;
   background-color: transparent;
   top: 0;
   left: 0;
@@ -2465,7 +2465,7 @@ Place List Area
 }
 
 .place-list-item .content p {
-  margin-left: 40px;
+  margin-left: 30px;
   margin-bottom: 0;
   padding-bottom: 15px;
   border-bottom: 1px dashed #e8e8e8;
@@ -8142,19 +8142,4 @@ Animation  CSS End
 
 .contact-modal-bg{
   background-color: rgba(0, 0, 0, 0.4);
-}
-
-.college-logo{
-	display: inline-block;
-	position: relative;
-	width: 3.4rem;
-	height: 3.4rem;
-	text-align: center;
-	border: #dee2e6;
-	border-radius: 50%;
-	background: #fff;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
-	line-height: 3rem;
-  border: solid 2px #fff;
-  margin: 0px 10px 15px 0px !important; 
 }
