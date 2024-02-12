@@ -23,6 +23,27 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
+class Course(models.Model):
+    title = models.CharField(max_length=120)
+    specialization = models.CharField(max_length=120, blank=True, null=True)
+    duration = models.CharField(max_length=120, blank=True, null=True)
+    meta_description = models.TextField(blank=True, null=True)
+    intro = models.CharField(max_length=220, blank=True, null=True)
+    slug = models.SlugField()
+    image = models.ImageField(upload_to='header', blank=True, null=True)
+    avg_fee = models.CharField(max_length=120, blank=True, null=True)
+    description = RichTextField(blank=True, null=True)
+    course_fees = RichTextField(blank=True, null=True)
+    fee_structure = models.TextField(blank=True, null=True)
+    college = RichTextField(blank=True, null=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-date_created']
+
+    def __str__(self):
+        return self.title
+
 class College(models.Model):
     title = models.CharField(max_length=120)
     meta_description = models.TextField(blank=True, null=True)
@@ -44,32 +65,11 @@ class College(models.Model):
     fee_range = models.CharField(max_length=120, blank=True, null=True)
     website = models.CharField(max_length=120, blank=True, null=True)
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
+    course = models.ManyToManyField(Course, related_name='Course')
+
 
     class Meta:
         ordering = ['-date_created']
 
     def __str__(self):
         return self.title
-
-class Course(models.Model):
-    title = models.CharField(max_length=120)
-    meta_description = models.TextField(blank=True, null=True)
-    intro = models.CharField(max_length=220)
-    slug = models.SlugField()
-    image = models.ImageField(upload_to='header')
-    description = RichTextField()
-    course_fees = RichTextField()
-    college = RichTextField()
-    date_created = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ['-date_created']
-
-    def __str__(self):
-        return self.title
-
-
-
-
-
-
