@@ -7,9 +7,4 @@ pyvenv.cfg
 bin
 lib 
 .vscode
-<<<<<<< HEAD
 core/templates/home.html
-=======
-*.pyc
-core/templates/base.html
->>>>>>> df526a5f1810891f51e3cc3871a8de16010ae861

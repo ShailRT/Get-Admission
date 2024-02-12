@@ -8143,3 +8143,18 @@ Animation  CSS End
 .contact-modal-bg{
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+.college-logo {
+	display: inline-block;
+	position: relative;
+	width: 3.4rem;
+	height: 3.4rem;
+	text-align: center;
+	border: #dee2e6;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+	line-height: 3rem;
+	border: solid 2px #fff;
+	margin: 0px 10px 15px 0px !important;
+}
